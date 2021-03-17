@@ -1,0 +1,44 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+ <div id="form" class="container" style="width: 50rem;">
+     <form #f="ngForm" (submit)="addTechno(f)">
+        <fieldset>Complètez les champs</fieldset>
+         <br>
+         <br>
+    <label for="technoname">Nom :</label><br>
+    <input type="text" id="technoname" ngModel name="technoname" ><br>
+
+    <label for="caterne">Prenom :</label><br>
+    <input type="text" id="caterne" ngModel name="caterne" ><br>
+
+    <label for="date">Date :</label><br>
+    <input type="date" id="date" ngModel name="date"><br>
+
+    <label for="category">Choisissez votre province:</label><br>
+    <select name="category" ngModel id="category" required>
+    <option value="">---</option>
+    <option value="Antsiranana">Antsiranana</option>
+    <option value="Antananarivo">Antananarivo</option>
+    <option value="Mahajanga">Mahajanga</option>
+    <option value="Fianarantsoa">Fianarantsoa</option>
+    <option value="Toliara">Toliara</option>
+</select>
+<br>
+    <div class="form-group">
+      <label for="exampleFormControlFile1">Images :</label><br>
+      <input type="file" class="form-control-file" id="exampleFormControlFile1" 
+      ngModel name="exampleFormControlFile1">
+    </div>
+<br>
+<label for="details">Votre message :</label><br>
+<textarea name="details" id="details" cols="30" rows="8" ngModel name="details"></textarea>
+<button class="btn btn-primary" type="submit" >valider</button>
+</form>
+</div>
+
+

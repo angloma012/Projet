@@ -1,0 +1,60 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">  
+      <div class="form-group">
+    <ul class="nav nav-tabs"  role="tablist">
+          <li><img style="height: 90px; width: 100px; font-size: 1.5rem; " 
+         class="rounded-circle" src="assets/mi.jpg" alt=""></li>
+         
+         <form #f="ngForm" (submit)="addApp(f)">
+          <li> <a routerLink="/heberge"><i style="color:steelblue; font-size: 1.5rem;" class="fas fa-images"></i></a> 
+             <input  type="text" placeholder="votre status" id="pub" ngModel name="pub"></li>
+           <li><button class="btn btn-primary" type="submit">Publiez</button> </li>
+        
+         </form>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a  routerLink="/" > <li><i style="color: royalblue ;font-size: 1.5rem;" 
+          class="fas fa-envelope"></i><br>Contacts</li></a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a routerLink="/" ><li><i style="color: red; font-size: 1.5rem;"
+          class="fas fa-map-marker-alt"></i><br>Localisation</li></a>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a  routerLink="/" > <li><i style="color: royalblue ;font-size: 1.5rem;" 
+            class="fas fa-search"></i><br>Search</li></a>
+
+     </ul>
+      
+     <div class="center" style="height: 1.5rem ; width: 10rem; background-color: blue; border-radius: 2rem;">
+        <p style="size: 6px; color: cornsilk;"> Nouvelles publications</p></div>     <hr> 
+  
+    </div>
+  </div>
+
+  
+      <div *ngFor="let app of allApps" >
+        <app-app-details [tech]="app" (deleteTech)="deleteApp($event)" ></app-app-details>
+        
+        <div *ngFor="let app of allApps" >
+          <div>
+              
+            </div>
+      </div>
+      </div>
+    

@@ -1,0 +1,11 @@
+#card {
+    border: 4px solid beige;
+    padding: 5px;
+    margin: 10px auto;
+    width: 89rem;
+}
+
+.id{
+    margin-left: 90%;
+    font-size: medium;
+}
